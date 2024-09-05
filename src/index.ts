@@ -26,9 +26,7 @@ app.use("/admin", adminRoutes);
 app.use(errorHandler);
 
 // start server
-const server = app.listen(PORT, () => {
-  logger.info(`Server is running at http://localhost:${PORT}`);
-});
+const server = app.listen(PORT);
 
 // Handle Socket.io
 handleSocketIO(server);
